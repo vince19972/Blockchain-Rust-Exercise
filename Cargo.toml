@@ -1,0 +1,15 @@
+[package]
+name = "blockchain-rust"
+version = "0.1.0"
+authors = ["vince19972 <vince19972@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "blockchainlib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "blockchain"
+path = "src/main.rs"
+
+[dependencies]
