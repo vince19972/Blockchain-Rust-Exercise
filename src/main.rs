@@ -18,6 +18,8 @@ fn main() {
         blocks: vec![genesis_block],
     };
 
+    println!("Verify: {}", &blockchain.verify());
+
     // 4. repeat the process
     for i in 1..=10 {
         let block_number = format!("Block {}", i);
@@ -29,6 +31,8 @@ fn main() {
         last_hash = block.hash.clone();
 
         blockchain.blocks.push(block);
+
+        println!("Verify: {}", &blockchain.verify());
     }
 
     println!("{:#?}", &blockchain);
